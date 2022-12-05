@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Rentauto</title>
+   
+    <meta name="robots" content="index follow">
+    <meta name="googlebot" content="index follow">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800|Poppins:300i,400,300,700,400i,500|Ubuntu:300i,400,300,700,400i,500|Raleway:400,500,600,700" rel="stylesheet">
+    <!-- CSS Files -->
+
+    <link rel="stylesheet" type="text/css" href="plugins/revslider/css/settings.css">
+    <!-- Owl Carousel Assets -->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/travlez-jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/loading.js"></script>
+
+
+    <!-- REVOLUTION JS FILES -->
+    <script type="text/javascript" src="plugins/revslider/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="plugins/revslider/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider/js/extensions/revolution.extension.video.min.js"></script>
+    <style type="text/css">
+       
+
+        .hermes .tp-bullet {
+            overflow: hidden;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: inset 0 0 0 2px rgb(255, 255, 255);
+            -webkit-transition: background 0.3s ease;
+            transition: background 0.3s ease;
+            position: absolute
+        }
+
+        .hermes .tp-bullet:hover {
+            background-color: rgba(0, 0, 0, 0)
+        }
+
+        .hermes .tp-bullet:after {
+            content: ' ';
+            position: absolute;
+            bottom: 0;
+            height: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 1px rgb(255, 255, 255);
+            -webkit-transition: height 0.3s ease;
+            transition: height 0.3s ease
+        }
+
+        .hermes .tp-bullet.selected:after {
+            height: 100%
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+  <!-- MODAL LOGINS -->
+	
+	<div id="mis-reservas" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          
+            <div class="modal-body">
+			 <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+			<div class="modal-header row form-group">
+                                   
+                                    <h5 class="text-uppercase italic text-medium font-weight-600 trn">Mis Reservas </h5>
+                                </div>
+               
+              <div class="row justify-content-md-center">
+
+                <div class="col-lg-4">
+                    <div class="padding-30px background-white border-1 border-grey-1">
+                        <form>
+                            <div class="form-group">
+                                <label  class="col-form-label"><strong class="trn">Correo Electrónico</strong></label>
+                                <input type="email" class="form-control rounded-0 apiom_email" id="" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-form-label"><strong class="trn">Numero de Confirmación</strong></label>
+                                <input type="text" class="form-control rounded-0" id="apiom_confirmation_number" placeholder="">
+                            </div>
+                            
+                            <div class="form-group">
+                                <a href="#" id="apiom_submit_mis_reservas" class="btn btn-primary btn-block rounded-0 background-main-color trn">Ir a la reserva</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="margin-bottom-20px margin-top-20px">
+                        <i class="fa fa-ticket margin-right-10px" aria-hidden="true"></i> <strong class="text-uppercase trn">¿No sabes cual es tu Nº de confirmación?</strong>
+                        <span class="d-block text-grey-2 trn">Te enviaremos tu Nº de reserva al mail registrado en nuestro sistema</span>
+						<span class="d-block"><a  class="text-grey-2 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse1" class=" trn">ENVIAR EMAIL</a></span>
+							<div class="  panel-collapse collapse" id="collapse3"  role="tabpanel" aria-labelledby="heading4" aria-expanded="false">
+						 <div class="form-group">
+                                
+                                <input type="text" class="form-control rounded-0" id="inputPassword3" placeholder="Email">
+                            </div>
+							 <div class="form-group">
+                                <a href="#" class="btn btn-primary btn-block rounded-0 background-main-color trn">Enviar</a>
+                            </div>
+                    </div>
+					 </div>
+
+                   
+                   
+                </div>
+				
+				
+
+            </div>
+            </div>
+        </div>
+    </div>
+	 </div>
+	 
+	 
+	 
+	 
+	 <div id="iniciar-sesion" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          
+            <div class="modal-body">
+			 <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+			<div class="modal-header row form-group">
+                                   
+                                    <h5 class="text-uppercase italic text-medium font-weight-600 trn">Iniciar Sesión </h5>
+                                </div>
+               
+              <div class="row justify-content-md-center">
+
+                <div class="col-lg-4">
+                    <div class="padding-30px background-white border-1 border-grey-1">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-form-label"><strong class=" trn">Correo Electrónico</strong></label>
+                                <input type="email" class="form-control rounded-0 apiom_email" id="" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword3" class="col-form-label"><strong class=" trn">Contraseña</strong></label>
+                                <input type="password" class="form-control rounded-0" id="apiom_password" placeholder="Contraseña">
+                            </div>
+                            
+                            <div class="form-group">
+                                <a href="#" id="apiom_submit_login" class="btn btn-primary btn-block rounded-0 background-main-color trn">Ingresar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="margin-bottom-20px margin-top-20px">
+                        <i class="fa fa-key margin-right-10px" aria-hidden="true"></i> <strong class="text-uppercase trn">¿Olvidó su contraseña?</strong>
+                        <span class="d-block text-grey-2 trn">Te enviaremos tu contraseña al mail registrado en nuestro sistema.</span>
+						<span class="d-block"><a  class="text-grey-2 collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1  trn">ENVIAR EMAIL</a></span>
+							<div class="  panel-collapse collapse" id="collapse1"  role="tabpanel" aria-labelledby="heading4" aria-expanded="false">
+						 <div class="form-group">
+                                
+                                <input type="text" class="form-control rounded-0" id="inputPassword3" placeholder="Email">
+                            </div>
+							 <div class="form-group">
+                                <a href="#" class="btn btn-primary btn-block rounded-0 background-main-color trn">Enviar</a>
+                            </div>
+                    </div>
+					 </div>
+
+                    <div class="margin-bottom-15px padding-bottom-15px border-bottom-1 border-grey-2">
+                        <i class="fa fa-user margin-right-10px" aria-hidden="true"></i> <strong class="text-uppercase collapsed trn" >¿Primera vez? </strong>
+                        <span class="d-block"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse1" class="text-grey-2 trn">REGISTRATE</a></span>
+                    </div>
+                   
+                </div>
+				
+				 <div class="col-lg-6 col-md-6 panel-collapse collapse" id="collapse2"  role="tabpanel" aria-labelledby="heading4" aria-expanded="false">
+                     <div class="margin-top-20px padding-30px background-white border-1 border-grey-1">
+					<form>
+					<strong class="text-uppercase trn">REGISTRARSE</strong>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label   class=" trn">Nombre</label>
+                                <input type="text" class="form-control"   placeholder="Nombre">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label   class=" trn">Apellido</label>
+                                <input type="email" class="form-control"   placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label  class=" trn">Email</label>
+                            <input type="text" class="form-control"   placeholder="Email">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label   class=" trn">Contraseña</label>
+                                <input type="password" class="form-control"   placeholder="Contraseña">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label   class=" trn">Repetir Contraseña</label>
+                                <input type="password" class="form-control"   placeholder="Contraseña">
+                            </div>
+                        </div>
+                        <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center font-weight-bold text-uppercase rounded-0 padding-15px trn">Enviar</a>
+                    </form>
+					 </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+	 </div>
+	 
+	 
+	 
+<!-- END MODAL LOGINS -->
+   
+    <!-- Header  -->
+    <header class="background-white box-shadow">
+        <div class="background-second-color padding-tb-5px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    
+                    <div class="col-lg-9 position-inherit">
+                        <ul class="user-area list-inline float-right margin-0px text-white">
+                           
+                            <li class="list-inline-item "><a data-toggle="modal" data-target="#mis-reservas" href="#"><i class="fa fa-user-plus padding-right-5px"></i><span  class=" trn">Mis Reservas</span></a></li>
+							 <li class="list-inline-item  padding-right-10px trn"><a data-toggle="modal" data-target="#iniciar-sesion" href="#"><i class="fa fa-lock padding-right-5px"></i><span  class=" trn">Iniciar Sesión</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-output">
+            <div class="container header-in">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a id="logo" href="index.html" class="d-inline-block margin-tb-10px"><img src="images/logo.png" alt=""></a>
+                        <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a>
+                    </div>
+                    <div class="col-lg-9 position-inherit">
+					<ul id="menu-main" class="nav-menu float-right link-padding-tb-20px dropdown-dark">
+						<li class="active "><a href="index.html"><span  class=" trn">Home</span></a></li>
+						<li><a href="empresa.html" class="trn" ><span  class=" trn">Empresa</span></a></li>
+						<li><a href="oficinas.html" class="trn" ><span  class=" trn">Oficinas</span></a></li>
+						<li><a href="flota.html" class="trn" ><span  class=" trn">Flota</span></a></li>
+						<li style="display: none;"><a   id="apiom_logout" ><span class="trn">Cerrar Sesión</span></a></li>
+							
+						<li class="has-dropdown"><a class="apiom_ul_monedas"   >$ARS</a>
+						<ul id="apiom_ulMonedaUsuario" class="sub-menu" role="menu">
+								<li class="convert" data-to-currency="ARS" id="ARS"><a>$ (ARS)</a></li>
+								<li class="convert" data-to-currency="USD" id="USD"><a>US$ (USD)</a></li>
+								<li class="convert" data-to-currency="EUR" value="EUR" id="EUR"><a>€ (EUR)</a></li>
+								<li class="convert" data-to-currency="BRL" value="BRL" id="BRL"><a>R$ (BRL)</a></li>
+								<li class="convert" data-to-currency="UYU" value="UYU" id="UYU"><a>$ (UYU)</a></li>
+								
+							</ul>
+						
+						</li>
+							<li class="has-dropdown"><a   id="idiomaSelector"><img class="bg-esp"  src="images/flag.png" alt=""></a>
+						<ul class="sub-menu" role="menu">
+								 <li><a class="lang_selector" id="idiomaES" data-value="es"
+                onclick="setIdioma('ES', true);$('#idiomaSelector').html(getIdiomaCompleto())"><img class="bg-ing"
+                    src="images/flag.png" alt=""><span  class=" trn"> Español</span></a></li>
+
+                    <li><a   class="lang_selector" id="idiomaEN" data-value="en" onclick="setIdioma('EN', true);$('#idiomaSelector').html(getIdiomaCompleto())"  ><img class="bg-bra" src="images/flag-uk.png" alt=""> <span  class=" trn">Inglés</span></a></li>
+                    <li><a   class="lang_selector" id="idiomaPT" data-value="pt" onclick="setIdioma('PT', true);$('#idiomaSelector').html(getIdiomaCompleto())"><img class="bg-ing trn" src="images/flag-br.png" alt=""> <span  class=" trn">Portugués</span></a></li>
+								
+							</ul>
+						
+						</li>
+					</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- // Header  -->
+    <!-- // Header  -->
+	<div class="content-desktop">
+    <div id="rev_slider_4_1_wrapper" class="content-desktop rev_slider_wrapper fullwidthbanner-container" data-alias="travel-new-2" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+        <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
+        <div id="rev_slider_4_1" class="content-desktop rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+            <ul>
+                <!-- SLIDE  -->
+                <li data-index="rs-13" data-transition="fade" data-slotamount="default"  data-hideslideonmobile="off" data-easein="default" data-easeout="default"  data-thumb="assets/100x50_c6810-ba_7.jpg" data-rotate="0" data-saveperformance="off"  data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="images/bg2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption   tp-resizeme trn" id="slide-13-layer-1" data-x="['right','right','right','right']" data-hoffset="['40','100','100','208']" data-y="['top','top','top','top']" data-voffset="['157','157','157','200']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"delay":10,"speed":760,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"+7410","speed":800,"frame":"999","to":"x:50px;opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['right','right','right','right']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 45px; line-height: 65px; font-weight: 600; color: #0658A3;font-family:Raleway;" ></div>
+
+                   
+
+                 
+
+                  
+                </li>
+                <!-- SLIDE  -->
+             
+                
+            </ul>
+            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+        </div>
+    </div>
+	</div>
+    <!-- END REVOLUTION SLIDER -->
+    <script type="text/javascript">
+        var tpj = jQuery;
+
+        var revapi4;
+        tpj(document).ready(function() {
+            if (tpj("#rev_slider_4_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_4_1");
+            } else {
+                revapi4 = tpj("#rev_slider_4_1").show().revolution({
+                    sliderType: "standard",
+                   // jsFileLocation: "//localhost/revslider-standalone/revslider/public/assets/js/",
+                    sliderLayout: "fullwidth",
+                    setInterval: false,
+                    dottedOverlay: "none",
+                    delay: false,
+                    stopAfterLoops:0,
+stopAtSlide:1,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "on",
+                        bullets: {
+                            enable: false,
+                            hide_onmobile: false,
+                            style: "hermes",
+                            hide_onleave: false,
+                            direction: "vertical",
+                            h_align: "right",
+                            v_align: "center",
+                            h_offset: 50,
+                            v_offset: 0,
+                            space: 5,
+                            tmp: ''
+                        }
+                    },
+                    responsiveLevels: [1240, 1024, 778, 480],
+                    visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: [1170, 900, 778, 480],
+                    gridheight: [555, 555, 500, 400],
+                    lazyType: "none",
+                    shadow: 0,
+                    spinner: "spinner0",
+                    stopLoop: true,
+                    stopAfterLoops: 0,
+                    stopAtSlide: 0,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "off",
+                        disableFocusListener: false,
+                    }
+                });
+            }
+        }); /*ready*/
+
+    </script>
+
+
+    <!-- Search Filter  -->
+    <div class="background-light-grey">
+        <div class="container">
+            <div id="search-filter-2" class="search-filter pull-top-80px z-index-3 position-relative">
+             
+                <div class="tab-content background-white padding-30px box-shadow" >
+
+                    <div class="tab-pane active" id="home" role="tabpanel">
+                        <div class="row">
+                            <div class="form-group col-lg-3">
+                                <label class="trn">Ciudad desde</label>
+                                <div class="destination"><select id="apiom_ciudad_desde"  type="text" class="input-text full-width" placeholder="Ciudad">
+								 <option class="trn">Ciudad</option>
+                                                                    <option>Bariloche</option>
+                                                                    <option>Salta</option>
+								
+								</select>
+								</div>
+                            </div>
+							<div class="form-group col-lg-3">
+                                <label class="trn">Ciudad hasta</label>
+                                <div class="destination"><select id="apiom_ciudad_hasta"  type="text" class="input-text full-width" placeholder="Ciudad">
+								 <option class="trn">Ciudad</option>
+                                                                    <option>Bariloche</option>
+                                                                    <option>Salta</option>
+								
+								</select></div>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <label class="trn">Fecha desde</label>
+                                <div class="date-input"><input id="apiom_fecha_desde" type="text" class="apiom_fecha_desde input-text datepicker full-width" value="15/06/2021" ></div>
+                                <input type="hidden" id="apiom_fecha_desde">
+                            </div>
+							 <div class="form-group col-lg-3">
+                                <label class="trn">Hora desde</label>
+                               <div class="time-input"><input id="apiom_hora_desde" type="time" class="input-text timepicker full-width" ></div>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <label class="trn">Fecha hasta</label>
+                                <div class="date-input"><input id="apiom_fecha_hasta" type="text" class="apiom_fecha_hasta input-text datepicker full-width" value="25/06/2021" placeholder="15 / 5 / 2017"></div>
+                                <input type="hidden" id="apiom_fecha_hasta">
+                            </div>
+							 <div class="form-group col-lg-3">
+                                <label class="trn">Hora hasta</label>
+                               <div class="time-input"><input id="apiom_hora_hasta"  type="time" class="input-text timepicker full-width"></div>
+                            </div>
+                            <div class="form-group  col-lg-2">
+                                <label class="trn">Código de tarifa</label>
+                                <div class=""><input id="apiom_codigo_tarifa"  type="text" class="input-text full-width" placeholder="-"></div>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="#" id="apiom_submit_search"  class="btn-sm btn-lg btn-block background-main-color text-white text-center text-uppercase font-weight-600 margin-top-30px padding-7px trn">Buscar auto</a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                   
+
+                  
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // Search Filter   -->
+
+
+    <!-- PROMOS -->
+    <section id="hot-hotels" class="hot-hotels padding-tb-60px background-light-grey">
+        <div id="apiom_promociones" class="container">
+            <div class="section-title section-title-center">
+                <h1 class="title italic "><span class="trn">Promociones</span> </h1>
+                 <span class="section-title-des trn">Tenemos para vos promociones especiales ¡al mejor precio!
+
+                </span>
+            </div>
+
+            <div class="row" id="apiom_promociones">
+
+                <!--  item ( 1 ) -->
+                <div class="col-sm-6 col-lg-4 sm-mb-30px">
+                    <div class="hotel-grid background-white border border-grey-1">
+                        <div class="hotel-img">
+                            <img src="images/promo2.jpg" alt="">
+                        </div>
+                       
+                      
+                    </div>
+                </div>
+
+
+                <!--  item ( 2 ) -->
+                <div class="col-sm-6 col-lg-4 sm-mb-30px">
+                    <div class="hotel-grid background-white border border-grey-1">
+                        <div class="hotel-img">
+                              <img src="images/promo2.jpg" alt="">
+                        </div>
+                       
+                    </div>
+                </div>
+
+
+                <!--  item ( 3 ) -->
+                 <div class="col-sm-6 col-lg-4 sm-mb-30px">
+                    <div class="hotel-grid background-white border border-grey-1">
+                        <div class="hotel-img">
+                              <img src="images/promo2.jpg" alt="">
+                        </div>
+                      
+                    </div>
+                </div>
+
+
+                <!-- hotel item ( 4 ) -->
+               
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- // Promos -->
+
+
+ <section class="background-red text-light-grey">
+        <div class="row no-gutters">
+            <div class="col-lg-6">
+                <img src="images/bg-logo.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="padding-40px">
+                    <h3 class="text-uppercase italic text-white margin-tb-20px trn">Quienes Somos</h3>
+                    <p><strong class="trn">Rentauto surgió en 2004 como una PyME encargada de satisfacer la demanda creciente en el alquiler de autos sin chofer en Córdoba. Somos una empresa dedicada a dar soluciones de movilidad, con una trayectoria en el rubro de casi 20 años, posicionándonos como líderes en el mercado local de alquiler de vehículos, avalados por numerosas empresas y particulares que día a día nos eligen.
+                    </strong></p>
+                    <p class=" trn">Nuestra compañía cuenta con ubicaciones estratégicas que facilitan a los clientes el acceso a nuestros servicios. Formamos un Equipo de Trabajo que está comprometido a lograr que su experiencia sea placentera, con la flota más moderna y variada del mercado, al mejor precio.</p>
+                    <p class=" trn">Nuestro principal valor es darles a nuestros clientes la máxima satisfacción brindando una atención personalizada, con el objetivo de poder superar sus expectativas.</p>
+                    <p class=" trn">Logramos esto gracias a los altos estándares de calidad que nos encargamos de cumplir día a día.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section id="top-cities" class="map-ba top-cities padding-top-100px padding-bottom-70px background-grey-1">
+       
+		<div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-8">
+                    <div class="section-title section-title-left">
+                        <h1 class="content-mobile  title text-white italic trn">Requisito Para Alquilar
+                        </h1>
+                        <span class="content-mobile text-white  trn">Estamos a tu disposición para asesorarte y ayudarte a encontrar el auto perfecto para vos 
+                        </span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 margin-bottom-30px">
+                            <div class="background-white  border border-grey" style="border-radius: 8px;">
+                                <div class="city-img float-left margin-right-20px"><a ><img src="images/info.png" alt=""></a></div>
+                                <div class="city-body">
+                                    <div class="padding-14px">
+                                       
+                                        <a class="d-block text-dark text-uppercase text-small font-weight-700 trn" >Licencia vigente </a>
+                                        <a  class="text-extra-small text-grey-4 margin-right-10px trn">De cualquier país</a>
+                                       
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                         <div class="col-md-6 margin-bottom-30px">
+                            <div class="background-white  border border-grey" style="border-radius: 8px;">
+                                <div class="city-img float-left margin-right-20px"><a><img src="images/info.png" alt=""></a></div>
+                                <div class="city-body">
+                                    <div class="padding-14px">
+                                       
+                                        <a class="d-block text-dark text-uppercase text-small font-weight-700 trn">Documento de Identidad</a>
+                                        <a  class="text-extra-small text-grey-4 margin-right-10px trn">De cualquier país</a>
+                                       
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 margin-bottom-30px">
+                            <div class="background-white  border border-grey" style="    border-radius: 8px;">
+                                <div class="city-img float-left margin-right-20px"><a><img src="images/info.png" alt=""></a></div>
+                                <div class="city-body">
+                                    <div class="padding-14px">
+                                       
+                                        <a class="d-block text-dark text-uppercase text-small font-weight-700 trn" >Tarjeta de Crédito</a>
+                                        <a  class="text-extra-small text-grey-4 margin-right-10px trn">Para Garantía</a>
+                                       
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 margin-bottom-30px">
+                            <div class="background-white  border border-grey" style="    border-radius: 8px;">
+                                <div class="city-img float-left margin-right-20px"><a ><img src="images/info.png" alt=""></a></div>
+                                <div class="city-body">
+                                    <div class="padding-14px">
+                                       
+                                        <a class="d-block text-dark text-uppercase text-small font-weight-700 trn" >Mayor de 21 años </a>
+                                        <a  class="text-extra-small text-grey-4 margin-right-10px trn">Sin excepción</a>
+                                       
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // container -->
+    </section>
+
+
+
+
+    <section class="padding-top-70px padding-bottom-65px background-light-grey">
+        <div class="container">
+            <div class="row">
+                <!-- Last News -->
+                <div class="col-lg-6">
+                    <div class="section-title section-title-left">
+                        <h1 class="title italic "><span class="trn">Nuestros Servicios </span> </h1>
+                        <span class="section-title-des trn">Elegí a donde ir, nosotros nos ocupamos de que puedas llegar con todas las comodidades, seguridad y confort</span>
+                    </div>
+					
+					
+
+                    <div class="news-cart background-red border border-grey text-white margin-bottom-35px ">
+                        <div class="float-sm-left   padding-15px">
+                            <i class="fa fa-clock-o  text-title-large"></i>
+                        </div>
+                        <div class="padding-20px">
+                            <a   class="d-block text-white text-uppercase text-up-small font-weight-700 trn">ATENCIÓN PERSONALIZADA</a>
+                           
+                        </div>
+                       
+                    </div>
+
+                    <div class="news-cart background-red border border-grey text-white text-white margin-bottom-35px ">
+                        <div class="float-sm-left   padding-15px">
+                            <i class="fa fa-arrow-up text-title-large"></i>
+                        </div>
+                        <div class="padding-20px">
+                            <a   class="d-block text-white text-uppercase text-up-small font-weight-700 trn">UPGRADE DE VEHÍCULO</a>
+                           
+                        </div>
+                       
+                    </div>
+					 <div class="news-cart background-red border border-grey text-white margin-bottom-35px ">
+                        <div class="float-sm-left   padding-15px">
+                            <i class="fa fa-user-o text-title-large"></i>
+                        </div>
+                        <div class="padding-20px">
+                            <a   class="d-block text-white text-uppercase text-up-small font-weight-700 trn">PERSONAL CAPACITADO</a>
+                           
+                        </div>
+                       
+                    </div>
+					
+					
+                </div>
+                <!-- // Last News -->
+
+                <!-- Traveler say -->
+                <div class="col-lg-6 travelers-say-in">
+                    <div class="section-title section-title-left">
+                        <h1 class="title italic "><span class="trn">Clientes que confian en nosotros</span> </h1>
+                        <span class="section-title-des trn">Ellos recomiendan la Experiencia Rentauto Argentina:</span>
+                    </div>
+
+                    <ul class="travelers-say margin-0px padding-0px list-unstyled" data-slider-id="1">
+
+                        <li class="padding-30px background-white border border-grey-1">
+                            <div class="header-say">
+                                <div class="sayer-img float-left margin-right-20px"><img src="images/user.jpg" alt=""></div>
+                                <h5 class="text-medium text-dark text-uppercase margin-bottom-0px margin-top-10px ">Fer Broese</h5>
+                                <i class="text-extra-small trn">Hace<span class="text-main-color ">un mes</span></i>
+                                <div class="clearfix"></div>
+                            </div>
+                            <i class="d-block margin-tb-20px text-medium text-grey-4 trn">Son gente seria y responsable, la atención es excelente. Muchas gracias</i>
+                        </li>
+
+
+                        <li class="padding-30px background-white border border-grey-1">
+                            <div class="header-say">
+                                <div class="sayer-img float-left margin-right-20px"><img src="images/user.jpg" alt=""></div>
+                                <h5 class="text-medium text-dark text-uppercase margin-bottom-0px margin-top-10px ">Javier Carlos Servin</h5>
+                                <i class="text-extra-small trn">Hace<span class="text-main-color ">un mes</span></i>
+                                <div class="clearfix"></div>
+                            </div>
+                            <i class="d-block margin-tb-20px text-medium text-grey-4 trn">Super conformes con la atención brindada y con la unidad que nos fue alquilada. Recomendable 100 %</i>
+                        </li>
+
+
+                        <li class="padding-30px background-white border border-grey-1">
+                            <div class="header-say">
+                                <div class="sayer-img float-left margin-right-20px"><img src="images/user.jpg" alt=""></div>
+                                <h5 class="text-medium text-dark text-uppercase margin-bottom-0px margin-top-10px ">Fede Rodriguez</h5>
+                                <i class="text-extra-small trn">Hace<span class="text-main-color ">un mesta</span></i>
+                                <div class="clearfix"></div>
+                            </div>
+                            <i class="d-block margin-tb-20px text-medium text-grey-4 trn">Exelente atención las unidades IMPECABLE todo perfecto en nuestro viaje a las Sierras de Cordoba muchas Gracias</i>
+                        </li>
+
+
+                        <li class="padding-30px background-white border border-grey-1">
+                            <div class="header-say">
+                                <div class="sayer-img float-left margin-right-20px"><img src="images/user.jpg" alt=""></div>
+                                <h5 class="text-medium text-dark text-uppercase margin-bottom-0px margin-top-10px ">Adonai Márquez</h5>
+                                <i class="text-extra-small trn">Hace<span class="text-main-color ">2 meses</span></i>
+                                <div class="clearfix"></div>
+                            </div>
+                            <i class="d-block margin-tb-20px text-medium text-grey-4 trn">Me atendieron de 10 el auto nuevo impecable muy buenos precios ademas. Los volveria a elegir cuando vuelva</i>
+                        </li>
+                        <li class="padding-30px background-white border border-grey-1">
+                            <div class="header-say">
+                                <div class="sayer-img float-left margin-right-20px"><img src="images/user.jpg" alt=""></div>
+                                <h5 class="text-medium text-dark text-uppercase margin-bottom-0px margin-top-10px ">Jorge Rodriguez Claret
+                                </h5>
+                                <i class="text-extra-small trn">Hace<span class="text-main-color ">2 meses</span></i>
+                                <div class="clearfix"></div>
+                            </div>
+                            <i class="d-block margin-tb-20px text-medium text-grey-4 trn">EXCELENTE EXPERIENCIA !!!!  Cumplieron ampliamente todo lo pactado. El auto practicamente nuevo.  Impecable. Sin duda MAS QUE RECOMENDABLES !!!</i>
+                        </li>
+                        <li class="padding-30px background-white border border-grey-1">
+                            <div class="header-say">
+                                <div class="sayer-img float-left margin-right-20px"><img src="images/user.jpg" alt=""></div>
+                                <h5 class="text-medium text-dark text-uppercase margin-bottom-0px margin-top-10px ">Dario Ryser</h5>
+                                <i class="text-extra-small trn">Hace<span class="text-main-color ">3 meses</span></i>
+                                <div class="clearfix"></div>
+                            </div>
+                            <i class="d-block margin-tb-20px text-medium text-grey-4 trn">La verdad muy recomendable,nosotros tuvimos una Ecosport durante mas de dos meses por una situacion especial y siempre se portaron muy bien y con la amabilidad que corresponde gracias Adrian</i>
+                        </li>
+                        <li class="padding-30px background-white border border-grey-1">
+                            <div class="header-say">
+                                <div class="sayer-img float-left margin-right-20px"><img src="images/user.jpg" alt=""></div>
+                                <h5 class="text-medium text-dark text-uppercase margin-bottom-0px margin-top-10px ">Lucia Sanchez</h5>
+                                <i class="text-extra-small trn">Hace<span class="text-main-color ">3 meses</span></i>
+                                <div class="clearfix"></div>
+                            </div>
+                            <i class="d-block margin-tb-20px text-medium text-grey-4 trn">Precios competitivos, autos impecables, excelente atención, muy profesional, seriedad y cumplimiento de los terminos. Super recomendables, los volveré a elegir.</i>
+                        </li>
+                        <li class="padding-30px background-white border border-grey-1">
+                            <div class="header-say">
+                                <div class="sayer-img float-left margin-right-20px"><img src="images/user.jpg" alt=""></div>
+                                <h5 class="text-medium text-dark text-uppercase margin-bottom-0px margin-top-10px ">Fernando Diaz</h5>
+                                <i class="text-extra-small trn">Hace<span class="text-main-color ">3 meses</span></i>
+                                <div class="clearfix"></div>
+                            </div>
+                            <i class="d-block margin-tb-20px text-medium text-grey-4 trn">Excelente atención relación costo beneficio ideal. Auto impecable, es la segunda vez que alquilo y los vuelvo a elegir.</i>
+                        </li>
+                        <li class="padding-30px background-white border border-grey-1">
+                            <div class="header-say">
+                                <div class="sayer-img float-left margin-right-20px"><img src="images/user.jpg" alt=""></div>
+                                <h5 class="text-medium text-dark text-uppercase margin-bottom-0px margin-top-10px ">Facundo Cosentino</h5>
+                                <i class="text-extra-small trn">Hace<span class="text-main-color ">3 meses</span></i>
+                                <div class="clearfix"></div>
+                            </div>
+                            <i class="d-block margin-tb-20px text-medium text-grey-4 trn">Excelente atención! Adrián fue claro, cordial y no tuvimos ningún inconveniente en la contratación. El auto en excelente estado. Lo recomendamos!</i>
+                        </li>
+
+                    </ul>
+
+                </div>
+				
+                <!-- // Traveler say -->
+            </div>
+        </div>
+    </section>
+
+   
+   <section id="hot-hotels" class="hot-hotels padding-tb-40px background-grey">
+        <div class="container">
+            <div class="section-title section-title-center">
+                <h1 class="title italic "><span class="trn">Preguntas Frecuentes</span> </h1>
+               
+            </div>
+
+            <div class="row">
+			
+			
+                <div class="col-lg-6 col-md-6">
+                    <div id="accordion" role="tablist" aria-multiselectable="true">
+                        <!-- faq 1 -->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse " data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapseOne" class="d-block text-dark text-capitalize text-up-small font-weight-700 "><i class="fa fa-info margin-right-10px" ></i> <span class="trn">Con que requisitos indispensables  debo contar para alquilar un vehículo?</span></a>
+                                </h5>
+                            </div>
+
+                            <div id="collapse-1" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="card-block padding-30px">
+                                    <span class="trn">Los requisitos excluyentes son los siguientes:</span><br>
+                                    <span class="trn">Licencia</span><br>
+                                    <span class="trn">DNI/Pasaporte</span><br>
+                                    <span class="trn">Ser mayor de 21 Años, o siendo menor, con una licencia cuya antigüedad sea como mínimo de 2 años</span><br>
+                                    <span class="trn">Tarjeta de crédito a los fines de garantizar la franquicia de seguro asumida contractualmente, cuyo monto se determinar en función de la categoría de vehículo elegida.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //  faq 1 -->
+                        <!-- faq 2 -->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="true" aria-controls="collapseOne" class="d-block text-dark text-capitalize text-up-small font-weight-700 trn"><i class="fa fa-info margin-right-10px" ></i> <span class="trn">Cuáles son las formas de pago y cuando se efectúa?</span></a>
+                                </h5>
+                            </div>
+
+                            <div id="collapse-2" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="card-block padding-30px trn">
+                                    <span class="trn">Los medios son los siguientes</span><br>
+                                    <span class="trn">Efectivo</span><br>
+                                    <span class="trn">Tarjeta de Débito (Visa Electrón, Maestro)</span><br>
+                                    <span class="trn">Tarjeta de Crédito (Visa, MasterCard, American Express, Cabal, Naranja)</span>
+                                    <span class="trn">Transferencia Bancaria</span>
+                                    <span class="trn">Al momento de retirar el vehículo el locatario debe haber abonado el 100% del alquiler</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //  faq 2 -->
+                        <!-- faq 3 -->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="true" aria-controls="collapseOne" class="d-block text-dark text-capitalize text-up-small font-weight-700 trn"><i class="fa fa-info margin-right-10px" ></i> <span class="trn">Como reservo el vehículo?
+                                    </span></a>
+                                </h5>
+                            </div>
+
+                            <div id="collapse-3" class="collapse hide" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="card-block padding-30px trn">Por todos los medios habilitados a tal fin, (mediante la web, mail, whats app, telefónicamente, redes sociales, etc), se puede consultar la disponibilidad. La reserva se formaliza mediante la transferencia bancaria de la seña del 30% para reservas con una anticipación de 30  o menos días, o transfiriendo el 100% para reservas con mayor antelación</div>
+                            </div>
+                        </div>
+                        <!-- //  faq 3 -->
+                        
+
+                    </div>
+                </div>
+               
+			     <div class="col-lg-6 col-md-6">
+                    <div id="accordion2" role="tablist" aria-multiselectable="true">
+                        <!-- faq 1 -->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse " data-parent="#accordion2" href="#collapse-12" aria-expanded="true" aria-controls="collapseOne" class="d-block text-dark text-capitalize text-up-small font-weight-700 trn"><i class="fa fa-info margin-right-10px" ></i> <span class="trn">Por cuánto tiempo se mantiene vigente la reserva</span></a>
+                                </h5>
+                            </div>
+
+                            <div id="collapse-12" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="card-block padding-30px trn">Por cuestiones operativas, toda  reserva con una hora o mas de demora sin comunicación expresa del locatario a los fines de informar tal situación, quedan canceladas, haciéndose extensivas las pautas fijadas en la pregunta 5. En caso de que pueda coordinarse otro horario, estará supeditado a la disponibilidad operativa y en tanto y en cuanto sea dentro de los horarios de oficina publicados en la web
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //  faq 1 -->
+                        <!-- faq 2 -->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse-22" aria-expanded="true" aria-controls="collapseOne" class="d-block text-dark text-capitalize text-up-small font-weight-700 trn"><i class="fa fa-info margin-right-10px" ></i> <span class="trn">Que establecen las políticas de cancelación?</span></a>
+                                </h5>
+                            </div>
+
+                            <div id="collapse-22" class="collapse " role="tabpanel" aria-labelledby="headingOne">
+                                <div class="card-block padding-30px trn">Si por cualquier motivo no se celebrase la locación, se estipula que la penalidad por tal motivo consiste en la pérdida del 30% transferido en concepto de seña y a cuenta de precio, o del 50% del pago total efectuado en el segundo supuesto previsto en la pregunta número 3.</div>
+                            </div>
+                        </div>
+                        <!-- //  faq 2 -->
+                        <!-- faq 3 -->
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordion2" href="#collapse-32" aria-expanded="true" aria-controls="collapseOne" class="d-block text-dark text-capitalize text-up-small font-weight-700 trn"><i class="fa fa-info margin-right-10px" ></i><span class="trn">En que consiste el contrato de alquiler?
+                                    </span></a>
+                                </h5>
+                            </div>
+
+                            <div id="collapse-32" class="collapse " role="tabpanel" aria-labelledby="headingOne">
+                                <div class="card-block padding-30px trn">Ver  los términos y condiciones contractuales</div>
+                            </div>
+                        </div>
+                        <!-- //  faq 3 -->
+                        
+
+                    </div>
+                </div>
+				
+				 <div class="container z-index-2 position-relative margin-30px">
+				 <div class="row ">
+				  
+			 <div class="col-md-10 ">
+            <h5 class="trn">¿Te quedaste con más dudas? Te contestamos todo lo que necesites saber. </h5>
+        </div>
+		 <div class="col-md-2 ">
+            <a href="preguntas-frecuentes.html" class="btn background-second-color text-white trn">Ingresá Aquí</a>
+			 </div>
+		 </div>
+		  </div>
+		 
+			
+			 </div>
+			 
+			  </div>
+			  
+	</section>
+
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-left">
+        <div class="container">
+            <div class="row padding-tb-30px">
+                <div class="col-lg-6 sm-mb-35px">
+                    <div class="about">
+                        <div class="logo margin-bottom-20px"><a href="index.html"><img src="images/logo-blanco.png" alt=""></a></div>
+                        <p class="trn">Nuestra empresa está dedicada a dar soluciones de movilidad, con una trayectoria en el rubro de casi 20 años, la que es avalada por numerosas  empresas y particulares que día a día nos eligen, posicionándonos como líderes en el mercado local de alquiler de vehículos. Contamos con ubicaciones estratégicas que facilitan a los clientes el acceso a nuestros servicios tanto en Córdoba como en Mendoza.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 sm-mb-35px">
+                    <ul class="footer-menu row margin-0px padding-0px list-unstyled">
+                        <li class="col-6  padding-tb-5px"><a href="empresa.html" class="text-white trn">Empresa</a></li>
+                        <li class="col-6  padding-tb-5px"><a href="flota.html" class="text-white trn">Flota</a></li>
+                        <li class="col-6  padding-tb-5px"><a href="oficinas.html" class="text-white trn">Oficinas</a></li>
+                        <li class="col-6  padding-tb-5px"><a href="sucursal-cordoba.html" class="text-white trn">Sucursal Córdoba</a></li>
+                        <li class="col-6  padding-tb-5px"><a href="sucursal-mendoza.html" class="text-white trn">Sucursal Mendoza</a></li>
+                        <li class="col-6  padding-tb-5px"><a href="preguntas-frecuentes.html" class="text-white trn">Preguntas Frecuentes</a></li>
+                        <li class="col-6  padding-tb-5px"><a href="terminos-y-condiciones.html" class="text-white trn">Términos & Condiciones</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <div class="row padding-tb-10px border-top-11 ">
+                <div class="col-lg-4">
+                
+                </div>
+                <div class="col-lg-4 sm-mb-20px">
+                       <p class="text-lg-left "><span class="text-white">Rentauto</span> | @2022 <span class="trn">Todos los derechos reservados</span></p>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="social_link list-inline text-sm-center text-lg-right">
+                        <li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/rentautoargentina 
+                            " target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a class="instagram" href="https://www.instagram.com/rentauto.argentina/ 
+                            " target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        
+                       
+                       
+                    </ul>
+                    <!-- // Social -->
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- // Footer -->
+    <script type="text/javascript" src="js/sticky-sidebar.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
