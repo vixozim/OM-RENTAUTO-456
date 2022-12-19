@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-   <title>Sucursal | Renauto</title>
+    <title>Para Empresas | Renauto</title>
    
     <meta name="robots" content="index follow">
     <meta name="googlebot" content="index follow">
@@ -25,16 +25,28 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
+
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="js/jquery.gomap-1.3.3.min.js"></script>
-	  <script type="text/javascript" src="js/sticky-sidebar.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script type="text/javascript" src="plugins/revslider_1/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider_1/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.video.min.js"></script>
 
 </head>
 
 <body>
-      <!-- MODAL LOGINS -->
+  <!-- MODAL LOGINS -->
 	
 	<div id="mis-reservas" class="modal fade">
     <div class="modal-dialog modal-lg">
@@ -197,7 +209,7 @@
 	 
 <!-- END MODAL LOGINS -->
    
-   <!-- Header  -->
+    <!-- Header  -->
     <header class="background-white box-shadow">
         <div class="background-second-color padding-tb-5px">
             <div class="container">
@@ -224,8 +236,7 @@
                     <div class="col-lg-9 position-inherit">
 					<ul id="menu-main" class="nav-menu float-right link-padding-tb-20px dropdown-dark">
 						<li class="active "><a href="index.html"><span  class=" trn">Home</span></a></li>
-                        <li><a href="nosotros.html" class="trn" ><span  class=" trn">Nosotros</span></a></li>
-                        <li><a href="para-empresa.html" class="trn" ><span  class=" trn">Para Empresa</span></a></li>
+						<li><a href="empresa.html" class="trn" ><span  class=" trn">Empresa</span></a></li>
 						<li><a href="oficinas.html" class="trn" ><span  class=" trn">Oficinas</span></a></li>
 						<li><a href="flota.html" class="trn" ><span  class=" trn">Flota</span></a></li>
 						<li style="display: none;"><a   id="apiom_logout" ><span class="trn">Cerrar Sesión</span></a></li>
@@ -260,11 +271,14 @@
         </div>
     </header>
     <!-- // Header  -->
-   <!-- Page title --->
+    <!-- // Header  -->
+    <!-- ======= end Header  ======= -->
+
+    <!-- Page title --->
     <div id="page-title" class="text-grey  background-red" >
         <div class="text-center">
             <div class="container z-index-2 position-relative">
-                <h5 class="font-weight-700 italic text-uppercase padding-tb-40px margin-0px trn">Sucursal Córdoba</h5>
+                <h5 class="font-weight-700 italic text-uppercase padding-tb-40px margin-0px trn">Para empresas</h5>
             </div>
             
         </div>
@@ -272,214 +286,79 @@
     <!-- Page title --->
 
 
-   <!-- page output -->
-    <div class="padding-tb-40px background-light-grey">
+    <!-- About Text & Image -->
+    <section class="padding-top-100px">
         <div class="container">
             <div class="row">
-
-                <!-- sidebar -->
                
-
-                   <!-- Sidebar MOBILE -->
-                <div  class="col-lg-4 sticky-sidebar content-mobile">
-                    <!--  Search -->
-                    <div class="widget">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false"  class="btn-sm btn-lg btn-block background-main-color text-white text-center text-uppercase font-weight-600  padding-7px trn"><span class="trn">Buscar Auto <i class="fa fa-search"></i></span></a>
-						
-                        <div class="search-filter panel-collapse collapse margin-top-10px" id="collapse-1" class=" " role="tabpanel" aria-expanded="false">
-                            <div class="form-group ">
-                                <label class="trn">Ciudad desde</label>
-                                <div class="destination"><select id="apiom_ciudad_desde"  type="text" class="input-text full-width" placeholder="Ciudad">
-								 <option class="trn">Ciudad</option>
-                                                                    <option>Bariloche</option>
-                                                                    <option>Salta</option>
-								
-								</select></div>
-                            </div>
-							<div class="form-group ">
-                                <label class="trn">Ciudad hasta</label>
-                                <div class="destination"><select id="apiom_ciudad_hasta"  type="text" class="input-text full-width" placeholder="Ciudad">
-								 <option class="trn">Ciudad</option>
-                                                                    <option>Bariloche</option>
-                                                                    <option>Salta</option>
-								
-								</select></div>
-                            </div>
-                            <div class="form-group ">
-                                <label class="trn">Fecha desde</label>
-                                <div class="date-input"><input id="apiom_fecha_desde" type="text" class="input-text datepicker full-width" value="15/5/2021"></div>
-                            </div>
-							 <div class="form-group ">
-                                <label class="trn">Hora desde</label>
-                               <div class="time-input2"><input id="apiom_hora_desde" type="time" class="input-text  full-width"  ></div>
-                            </div>
-                            <div class="form-group ">
-                                <label class="trn">Fecha hasta</label>
-                                <div class="date-input"><input id="apiom_fecha_hasta" type="text" class="input-text datepicker full-width" value="25/5/2021"></div>
-                            </div>
-							 <div class="form-group ">
-                                <label class="trn">Hora hasta</label>
-                               <div class="time-input3"><input id="apiom_hora_hasta"  type="time" class="input-text  full-width" ></div>
-                            </div>
-                            <a href="#" id="apiom_submit_search"  class="btn-sm btn-lg btn-block background-main-color text-white text-center text-uppercase font-weight-600 margin-top-30px padding-7px trn"> Buscar auto</a>
-                        </div>
-                    </div>
-                    <!-- //   Search -->
-
-
+                <div class="col-lg-4 col-md-4"><img src="images/empresa.jpg" alt=""></div>
+				 <div class="col-lg-8">
+                    <h3 class="margin-bottom-20px text-red  text-uppercase trn">Elegí como moverte . Consulte sobre nuestro servicio para empresas. </h3>
+                    <h6 class="margin-bottom-30px trn">ALQUILAR VEHÍCULOS, GENERA A SU EMPRESA IMPORTANTES BENEFICIOS: </h6>
+					<p class="text-grey-2 margin-bottom-10px trn">Se evita inmovilizar el capital de trabajo, sin sufrir la depreciación del mismo al renovar su flota.</p>
+                    <p class="text-grey-2 margin-bottom-10px trn">Posee durante la contratación, el libre mantenimiento de las unidades.</p>
+                    <p class="text-grey-2 margin-bottom-30px trn">Ahorro en el pago de impuestos, seguros, salarios del personal asignado al seguimiento de la flota,etc.</p>
+                    <p class="text-grey-2 margin-bottom-30px trn">Cuenta con la sustitución inmediata de la unidad en caso de desperfectos técnicos o accidentes.</p>
+                    <p class="text-grey-2 margin-bottom-30px trn">Al considerarse un gasto para su empresa pueden deducirse los montos de ganancias y el crédito fiscal del IVA.</p>
                    
-
-                 
-
-                   
-
-
                 </div>
-				
-				 <div class="col-lg-4 sticky-sidebar content-desktop">
-                    <!--  Search Desktop-->
-                    <div class="widget">
-                        <h4 class="widget-title clearfix"><span class="trn">Buscar Auto</span></h4>
-                        <div class="search-filter">
-                             <div class="form-group ">
-                                <label class="trn">Ciudad desde</label>
-                                <div class="destination"><select id="apiom_ciudad_desde"  type="text" class="input-text full-width" placeholder="Ciudad">
-								 <option class="trn">Ciudad</option>
-                                                                    <option>Bariloche</option>
-                                                                    <option>Salta</option>
-								
-								</select></div>
-                            </div>
-							<div class="form-group ">
-                                <label class="trn">Ciudad hasta</label>
-                                <div class="destination"><select id="apiom_ciudad_hasta"  type="text" class="input-text full-width" placeholder="Ciudad">
-								 <option class="trn">Ciudad</option>
-                                                                    <option>Bariloche</option>
-                                                                    <option>Salta</option>
-								
-								</select></div>
-                            </div>
-                            <div class="form-group ">
-                                <label class="trn">Fecha desde</label>
-                                <div class="date-input"><input id="apiom_fecha_desde" type="text" class="input-text datepicker full-width" value="25/5/2021"></div>
-                            </div>
-							 <div class="form-group ">
-                                <label class="trn">Hora desde</label>
-                               <div class="time-input2"><input id="apiom_hora_desde" type="time" class="input-text  full-width"  ></div>
-                            </div>
-                            <div class="form-group ">
-                                <label class="trn">Fecha hasta</label>
-                                <div class="date-input"><input id="apiom_fecha_hasta" type="text" class="input-text datepicker full-width" value="25/5/2021"></div>
-                            </div>
-							 <div class="form-group ">
-                                <label class="trn">Hora hasta</label>
-                               <div class="time-input3"><input id="apiom_hora_hasta"  type="time" class="input-text  full-width" ></div>
-                            </div>
-                            <a href="#" id="apiom_submit_search"  class="btn-sm btn-lg btn-block background-main-color text-white text-center text-uppercase font-weight-600 margin-top-30px padding-7px trn"> Buscar auto</a>
-                        </div>
-                    </div>
-					</div>
-                    <!-- //   Search Desktop -->
-                <!-- // sidebar -->
-
-                <!--  content -->
-                <div class="col-lg-8 col-md-8 ">
-
-                    <!-- texto -->
-                    <div class="blog-entry background-white border-1 border-grey-1 margin-bottom-35px">
-                      
-                        <div class="padding-30px">
-                          
-                            <h4 class="d-block  text-capitalize  text-dark font-weight-700 margin-tb-10px  trn">Sucursal Córdoba</h4>
-							  <div class="meta">
-                                <span class="margin-right-20px text-medium trn">Dirección : <span class="text-red">Av. La Voz del Interior 7000, Ciudad Empresaria, Córdoba </span></span></br>
-                                <span class="margin-right-20px text-medium trn">Teléfono : <span class="text-red">+54 9 3517 91-5738</span></span></br>
-                                <span class="margin-right-20px text-medium trn">Email : <span class="text-red">info@rentautoargentina.com.ar</span></span>
-                            </div>
-							
-							 <ul class="social_link list-inline">
-							 
-                            <li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/rentautoargentina" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                           
-                          
-                            <li class="list-inline-item"><a class="google" href="https://www.instagram.com/rentauto.argentina/"  target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                          
-                        </ul>
-                            <div class="post-entry">
-                                <div class="d-block text-up-small text-grey-4 margin-bottom-15px">
-                                    <p class="text-bold italic text-red trn">Somos tu solución en movilidad en Córdoba. Servicio Personalizado. Amplia variedad de modelos.
-                                    </p>
-                                    <h5 style="color:#333" class=" trn">¡Escapadas de Finde en Córdoba!</h5>
-                                    <p class=" trn">¡Villa Carlos Paz!</p>
-                                        <p class=" trn">Una de las ciudades más elegidas por visitantes de todo el país durante el verano, pero que no pierde su encanto en ningún momento del año. Esto se debe gracias a su destacada oferta turística que, desde la decada de 1970, no deja de ofrecer grandes propuestas comerciales, gastronomicas y de entretenimiento para todos los gustos.</p>
-                                   
-                                        <img src="images/paisaje.jpg" width="50%" class="alignright"> 
-                                        <p class=" trn">¡Falda del Carmen!</p>
-                                        <p class=" trn">Ubicada en el departamento de Santa María, a 7km. de Alta Gracia, Falda del Carmen combina descanso y paseos: ofrece postas gastronómicas, un observatorio y una capilla pintoresca. Se trata de una región en la que se respira tranquilidad y propone el disfrute de diversos paseos a la orilla del arroyo homónimo. Además, recorriendo sus senderos, llama la atención la capilla Nuestra Señora del Carmen, emplazada en un entorno de plena naturaleza.</p>
-									
-                                        <p class=" trn">¡Jesus Maria!</p>
-                                        <p class=" trn">Además de su popular y renombrado Festival de Doma y Folklore, en Jesus Maria se destaca el Museo Jesuitico Nacional, que recientemente recuperó la tradición Vitinicola de sus origenes plantando en su predio unas 60 vides de uva torrontés, en sintonía con el relato histórico de que los jesuitas que ocupaban la estancia, tenian allí una de las bodegas mas longevas del pais.</p>
-
-                                        <p class=" trn">¡Villa General Belgrano!</p>
-                                        <p class=" trn">La tradición alemana y su fiesta cervecera destacan cada Octubre en uno de los lugares más lindos de Córdoba. Allí también, durante el mes de Julio, se celebra la Fiesta del Chocolate Alpino. ¿Sabías que sus primeros pobladores fueron 127 familias alemanas que convirtieron a Villa General Belgrano en la mayor colonia de dicha procedencia en toda Argentina?</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // texto -->
-					
-					 <!-- Related Posts -->
-                    <div class="background-white border-1 border-grey-1 margin-bottom-35px padding-30px">
-                        <h4 class="table-title margin-bottom-30px trn"><span class="trn">Promociones especiales</span></h4>
-
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="background-white">
-                                    <div class="post-img">
-                                        <a href="#"><img src="images/promo2.jpg" alt=""></a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="background-white">
-                                    <div class="post-img">
-                                        <a href="#"><img src="images/promo2.jpg" alt=""></a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-
-                        </div>
-                       
-                    </div>
-                    <!-- // Related Posts -->
-
-                    <!--  map  -->
-                    <div class="background-white border-1 border-grey-1 margin-tb-35px padding-30px">
-					  <h4 class="table-title margin-bottom-30px  trn"><span class="trn">Donde estamos</span></h4>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13631.135112756596!2d-64.207028!3d-31.337344!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe4285ae349cea546!2sRentauto%20Argentina!5e0!3m2!1ses!2sar!4v1670244445922!5m2!1ses!2sar" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <!-- // map  -->
-
-
-                   
-
-                  
-
-
-                </div>
-                <!-- //  content -->
-
             </div>
         </div>
-    </div>
-    <!-- //  page output -->
+    </section>
+
+   
+
+
+    <section class="padding-tb-100px background-light-grey">
+        <div class="container">
+            <div class="services-out">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <h3><i class="fa fa-user icon-round"></i>
+                            <span class="text-medium text-uppercase trn">Atención Personalizada</span></h3>
+                        <i class="d-block text-up-small text-grey-2 margin-bottom-15px trn">En Rentauto pensamos en todos los detalles para que alquiles tu auto con tranquilidad y te sientas seguro.</i>
+                       
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <h3><i class="fa fa-automobile icon-round"></i>
+                            <span class="text-medium text-uppercase trn">Los mejores Autos</span></h3>
+                        <i class="d-block text-up-small text-grey-2 margin-bottom-15px trn">Tenemos una amplia flota disponible para que elijas la que más se adapte a vos.</i>
+                      
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <h3><i class="fa fa-plane icon-round"></i>
+                            <span class="text-medium text-uppercase trn">Asistencia en Aeropuertos</span></h3>
+                        <i class="d-block text-up-small text-grey-2 margin-bottom-15px trn">Te esperamos con tu vehículo en el Aeropuerto de Córdoba y Mendoza. </i>
+                     
+                    </div>
+
+
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
    
+
+
+
+    
+
+
+
+
+
+    
     <!-- Footer -->
     <footer class="text-center text-lg-left">
         <div class="container">
