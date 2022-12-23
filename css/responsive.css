@@ -3933,4 +3933,13 @@ header#sidebar-header ul.nav-menu .mega-links-4columns ul.sub-menu-columns > li 
 
 }
 
+
+@media only screen and (min-width: 1370px) {
+
+    .padding-lg-10px{
+
+        padding-top: 60px;
+
+    }
+}
 /*# sourceMappingURL=responsive.css.map */
