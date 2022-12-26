@@ -25943,6 +25943,17 @@ ul.pagination-style-2 li a .page-item:last-child .page-link {
     z-index: 1;
 }
 
+textarea {
+    overflow: auto;
+    resize: vertical;
+    border: none;
+    border-radius: 10px;
+}
+
+textarea::placeholder{
+    padding: 5px;
+}
+
 /*------------------------------------------------------------------------*
 /* Section Style           -----------------------------------------------*
 ------------------------------------------------------------------------- */
