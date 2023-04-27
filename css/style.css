@@ -187,6 +187,127 @@ video {
 }
 
 
+.whatsapp {
+    position: fixed;
+    width: 112px;
+    height: 26px;
+    bottom: 120px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 100;
+}
+.whatsapp:hover{
+    position: fixed;
+    width: 112px;
+    height: 26px;
+    bottom: 120px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 100;
+}
+  
+  .whatsapp-icon {
+    margin-top:2px;
+  }
+
+  .whatsapp-cordoba {
+    position: fixed;
+    width: 112px;
+    height: 26px;
+    bottom: 80px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 100;
+}
+.whatsapp-cordoba:hover{
+    position: fixed;
+    width: 112px;
+    height: 26px;
+    bottom: 80px;
+    right: 40px;
+    background-color: #25d366 !important;
+    color: #FFF !important;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    z-index: 100;
+}
+  
+  .whatsapp-icon-cordoba {
+    margin-top:13px;
+  }
+
+  @media only screen and (max-width: 769px) {
+
+    .whatsapp {
+        position: fixed;
+        width: 91px;
+        height: 26px;
+        bottom: 112px;
+        right: 16px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 14px;
+        z-index: 100;
+    }
+
+    .whatsapp-cordoba {
+        position: fixed;
+        width: 84px!important;
+        height: 26px!important;
+        bottom: 80px;
+        right: 14px!important;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 14px!important;
+        z-index: 100;
+    }
+
+    .whatsapp:hover {
+        position: fixed;
+        width: 91px!important;
+        height: 26px!important;
+        bottom: 112px!important;
+        right: 16px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius:10px;
+        text-align: center;
+        font-size: 14px!important;
+        z-index: 100;
+    }
+
+    .whatsapp-cordoba:hover {
+        position: fixed;
+        width: 84px!important;
+        height: 26px!important;
+        bottom: 80px;
+        right: 14px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 14px!important;
+        z-index: 100;
+    }
+ }
+
 /* ===================================
     Header
 ====================================== */
